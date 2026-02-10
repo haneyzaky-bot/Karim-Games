@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+  <title>Color Wars — Karim Games</title>
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="start.css">
+  <link rel="stylesheet" href="colorwars.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <a class="back" href="play.html">رجوع</a>
+      <div class="brand">Color Wars</div>
+      <div class="sub">نسخة Offline — شبيهة Chain Reaction</div>
+    </header>
+
+    <section class="panel">
+      <div class="row">
+        <div class="lbl">الوضع</div>
+        <select id="mode" class="inp">
+          <option value="2" selected>لاعبين (2)</option>
+          <option value="3">3 لاعبين (تجريبي)</option>
+          <option value="4">4 لاعبين (تجريبي)</option>
+        </select>
+        <button id="btnNew" class="btn">لعبة جديدة</button>
+      </div>
+
+      <div class="row" style="margin-top:10px">
+        <div class="chip" id="turnChip">الدور: ...</div>
+        <div class="chip" id="hintChip">اضغط على خلية فاضية أو خلية من لونك</div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div id="board" class="board" aria-label="لوحة اللعبة"></div>
+    </section>
+
+    <section class="panel">
+      <div class="mini">
+        قواعد مختصرة:
+        <ul>
+          <li>كل خلية لها سعة حسب مكانها: ركن=2، حافة=3، وسط=4.</li>
+          <li>عند تجاوز السعة تنفجر وتوزّع نقطة لكل جار وتتلوّن بلونك.</li>
+          <li>الفوز عند اختفاء كل ألوان الخصوم بعد أن يبدأ الجميع اللعب.</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <script src="colorwars.js"></script>
+</body>
+</html>

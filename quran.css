@@ -1,0 +1,114 @@
+:root{ --qgap:12px; --paper:#f6f1e6; --ink:#151515; --ink2:#333; --line:rgba(0,0,0,.10); }
+.wrapQ{ max-width:1100px; margin: 0 auto; padding: 12px; display:flex; flex-direction:column; gap:12px; }
+.panelQ{ background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); border-radius: 14px; padding: 12px; }
+.rowQ{ display:flex; gap: var(--qgap); align-items:center; flex-wrap:wrap; }
+.btnQ{ background: rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.16); color:#fff; padding:10px 12px; border-radius: 12px; text-decoration:none; cursor:pointer; }
+.btnQ:active{ transform: scale(.98); }
+.inp{ flex:1; min-width: 220px; padding: 10px 12px; border-radius: 12px; border:1px solid rgba(255,255,255,.16); background: rgba(0,0,0,.22); color:#fff; outline:none; }
+.lbl{ opacity:.9; }
+.sel{ padding: 10px 12px; border-radius: 12px; border:1px solid rgba(255,255,255,.16); background: rgba(0,0,0,.22); color:#fff; outline:none; min-width: 220px; }
+
+.readerQ{ border-radius: 18px; overflow:hidden; border:1px solid rgba(255,255,255,.10); }
+.mushaf{ background: var(--paper); color: var(--ink); padding: 18px 16px; line-height: 2.2; font-size: 26px;
+  font-family: "Amiri","Noto Naskh Arabic","Scheherazade New", serif;
+}
+.surahHead{ display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:10px; }
+.surahTitle{ font-weight: 900; font-size: 18px; color: var(--ink); }
+.surahMeta{ font-size: 13px; color: var(--ink2); opacity:.85; }
+.basmala{ text-align:center; font-size: 22px; margin: 6px 0 12px; letter-spacing:.2px; }
+.ayah{ display:inline; }
+.ayahText{ }
+.ayahMark{ display:inline-flex; align-items:center; justify-content:center; min-width: 34px; height: 28px;
+  padding:0 8px; margin:0 6px 0 4px; border-radius: 999px; border:1px solid var(--line);
+  font-size: 14px; color: var(--ink2); font-weight: 800; vertical-align: middle;
+}
+.ayahTap{ background: rgba(0,0,0,.04); border-radius: 10px; padding: 0 4px; }
+.tip{ font-size: 13px; opacity:.85; margin-top: 10px; }
+
+.results{ margin-top: 10px; background: rgba(0,0,0,.25); border:1px solid rgba(255,255,255,.12); border-radius: 14px; padding: 10px; max-height: 300px; overflow:auto; }
+.r{ padding:8px 10px; border-radius: 12px; cursor:pointer; border:1px solid transparent; color:#fff; }
+.r:hover{ border-color: rgba(255,255,255,.16); background: rgba(255,255,255,.06); }
+.r .small{ opacity:.8; font-size: 12px; margin-top: 2px; }
+
+.hidden{ display:none !important; }
+
+.audioBox{ margin-top: 10px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,.10); display:flex; flex-direction:column; gap:8px; }
+.lbl2{ opacity:.85; font-size: 14px; }
+
+@media (max-width: 720px){
+  .mushaf{ font-size: 22px; padding: 16px 12px; line-height: 2.15; }
+  .basmala{ font-size: 20px; }
+}
+@media (max-width: 420px){
+  .mushaf{ font-size: 20px; }
+  .ayahMark{ min-width: 30px; height: 26px; font-size: 13px; }
+}
+
+/* ====== مصحف عثماني Offline ====== */
+@font-face{
+  font-family: "UthmanTN";
+  src: url("assets/fonts/UthmanTN_v2-0.ttf") format("truetype");
+  font-display: swap;
+}
+.qFontMushaf{
+  font-family: "UthmanTN", "Amiri Quran", "Amiri", serif;
+  letter-spacing: 0;
+}
+#verses.mushaf .ayahText{ font-size: var(--qFontSize, 34px); line-height: 2.1; }
+#verses.cards .ayah{ background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); border-radius: 14px; padding: 14px; margin: 10px 0; }
+#verses.mushaf .ayah{ display:inline; }
+#verses.mushaf .ayahNum{
+  display:inline-flex; align-items:center; justify-content:center;
+  width: 30px; height: 30px; border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.25);
+  margin: 0 8px; font-size: 14px; opacity:.9
+}
+#verses.mushaf .ayahSep{ display:inline-block; margin: 0 8px; opacity:.5 }
+#verses .bismillah{
+  text-align:center;
+  margin: 18px 0 10px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: rgba(0,0,0,.25);
+  border: 1px solid rgba(255,255,255,.12);
+}
+#verses .bismillah .ayahText{ font-size: calc(var(--qFontSize, 34px) * 0.95); }
+.qToolbar2{
+  display:flex; flex-wrap:wrap; gap:10px;
+  margin: 10px 0 0;
+}
+.qToolbar2 .chip{
+  display:flex; align-items:center; gap:8px;
+  padding: 8px 10px; border-radius: 12px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.12);
+}
+.qToolbar2 input[type="range"]{ width: 150px; }
+.qMiniBtn{
+  cursor:pointer; user-select:none;
+  padding: 10px 12px; border-radius: 12px;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.14);
+  color: rgba(255,255,255,.92);
+}
+.qMiniBtn:active{ transform: translateY(1px); }
+#results .resItem{
+  cursor:pointer;
+  padding: 10px 12px;
+  margin: 8px 0;
+  border-radius: 12px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.12);
+}
+#results .resItem:hover{ background: rgba(255,255,255,.09); }
+.ayah.highlight{
+  outline: 2px solid rgba(255, 193, 7, .65);
+  outline-offset: 4px;
+  border-radius: 14px;
+}
+.pageBar{
+  display:flex; gap:10px; align-items:center; justify-content:space-between;
+  margin: 12px 0;
+}
+.pageBar .qMiniBtn{ flex:0 0 auto; }
+.pageBar .pageInfo{ opacity:.9; }

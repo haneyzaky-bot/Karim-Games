@@ -1,0 +1,45 @@
+:root{
+  --cell: 46px;
+}
+.board{
+  display:grid;
+  grid-template-columns: repeat(6, var(--cell));
+  grid-auto-rows: var(--cell);
+  gap: 10px;
+  justify-content:center;
+  padding: 10px;
+}
+.cell{
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.05);
+  display:flex; align-items:center; justify-content:center;
+  font-size: 18px;
+  cursor:pointer;
+  user-select:none;
+  position:relative;
+  overflow:hidden;
+}
+.cell:active{ transform: translateY(1px); }
+.dot{
+  width: 10px; height:10px;
+  border-radius:999px;
+  margin: 2px;
+  display:inline-block;
+}
+.dots{ display:flex; gap:4px; flex-wrap:wrap; justify-content:center; }
+.owner0{ background: rgba(255,255,255,.05); }
+.owner1{ box-shadow: 0 0 0 2px rgba(255,59,48,.55) inset; }
+.owner2{ box-shadow: 0 0 0 2px rgba(10,132,255,.55) inset; }
+.owner3{ box-shadow: 0 0 0 2px rgba(52,199,89,.55) inset; }
+.owner4{ box-shadow: 0 0 0 2px rgba(255,214,10,.55) inset; }
+
+.owner1 .dot{ background: rgba(255,59,48,.92); }
+.owner2 .dot{ background: rgba(10,132,255,.92); }
+.owner3 .dot{ background: rgba(52,199,89,.92); }
+.owner4 .dot{ background: rgba(255,214,10,.92); }
+
+@media (max-width: 420px){
+  :root{ --cell: 40px; }
+  .board{ gap: 8px; }
+}

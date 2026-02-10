@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+  <title>XO — Karim Games</title>
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="start.css">
+  <link rel="stylesheet" href="xo.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <a class="back" href="play.html">رجوع</a>
+      <div class="brand">XO</div>
+      <div class="sub">ضد صديق أو ضد الكمبيوتر</div>
+    </header>
+
+    <section class="panel">
+      <div class="row">
+        <label class="lbl">الوضع</label>
+        <select id="mode" class="inp">
+          <option value="friend" selected>لاعبين</option>
+          <option value="ai">ضد الكمبيوتر</option>
+        </select>
+
+        <label class="lbl">المستوى</label>
+        <select id="lvl" class="inp">
+          <option value="easy">سهل</option>
+          <option value="medium" selected>متوسط</option>
+          <option value="hard">صعب</option>
+        </select>
+
+        <button id="btnNew" class="btn">جولة جديدة</button>
+      </div>
+
+      <div class="row" style="margin-top:10px">
+        <div class="chip" id="turnChip">الدور: ...</div>
+        <div class="chip" id="scoreChip">X: 0 — O: 0</div>
+        <button id="btnResetScore" class="btn">تصفير النتيجة</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div id="grid" class="xoGrid" aria-label="لوحة XO"></div>
+      <div class="xoMsg" id="msg"></div>
+    </section>
+  </div>
+
+  <script src="xo.js"></script>
+</body>
+</html>

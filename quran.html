@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+  <title>القرآن الكريم — Karim Games</title>
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="start.css">
+  <link rel="stylesheet" href="quran.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <a class="back" href="read.html">رجوع</a>
+      <div class="brand">القرآن الكريم</div>
+      <div class="sub">قراءة + بحث (Offline) — خط عثماني + أوضاع عرض</div>
+    </header>
+
+    <section class="panel">
+      <div class="row">
+        <label class="lbl">السورة</label>
+        <select id="surahSel"></select>
+
+        <button id="btnGo" class="btn">فتح</button>
+      </div>
+
+      <div class="qToolbar2">
+        <div class="chip">
+          <span>الوضع</span>
+          <select id="viewMode">
+            <option value="mushaf" selected>مصحف</option>
+            <option value="cards">بطاقات</option>
+            <option value="pages">صفحات (تجريبي)</option>
+          </select>
+        </div>
+
+        <div class="chip">
+          <span>حجم الخط</span>
+          <input id="fontSize" type="range" min="22" max="48" step="1" value="34">
+          <span id="fontSizeVal">34</span>
+        </div>
+
+        <div class="chip">
+          <label><input id="bismSeparate" type="checkbox" checked> البسملة كسطر مستقل</label>
+        </div>
+
+        <div class="chip">
+          <span>الترقيم</span>
+          <select id="numMode">
+            <option value="official" selected>رسمي</option>
+            <option value="sequential">متسلسل</option>
+          </select>
+        </div>
+
+        <button id="btnPlaySurah" class="qMiniBtn">تشغيل السورة (إن وُجد صوت)</button>
+        <button id="btnStopAudio" class="qMiniBtn">إيقاف</button>
+      </div>
+
+      <div class="row" style="margin-top:10px">
+        <label class="lbl">بحث</label>
+        <input id="search" class="inp" placeholder="ابحث في القرآن (مثال: الصراط)" />
+        <button id="btnClear" class="btn">مسح</button>
+      </div>
+
+      <div class="row" style="margin-top:10px">
+        <label class="lbl">حزمة الصوت</label>
+        <select id="audioPackSel">
+          <option value="">بدون صوت</option>
+        </select>
+        <button id="btnReloadPacks" class="btn">تحديث</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div id="toast" class="toast" style="display:none"></div>
+      <div id="results"></div>
+    </section>
+
+    <section class="panel qFontMushaf">
+      <div id="pageBar" class="pageBar" style="display:none">
+        <button id="btnPrevPage" class="qMiniBtn">السابق</button>
+        <div class="pageInfo" id="pageInfo"></div>
+        <button id="btnNextPage" class="qMiniBtn">التالي</button>
+      </div>
+      <div id="verses" class="mushaf"></div>
+      <audio id="qAudio" preload="none"></audio>
+    </section>
+  </div>
+
+  <script src="quran.js"></script>
+</body>
+</html>

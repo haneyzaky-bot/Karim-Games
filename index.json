@@ -1,0 +1,102 @@
+{
+  "version": 1,
+  "categories": [
+    {
+      "id": "quran",
+      "title": "القرآن الكريم",
+      "icon": "quran",
+      "hint": "قراءة + بحث (Offline)",
+      "page": "quran.html",
+      "time": []
+    },
+    {
+      "id": "morning",
+      "title": "أذكار الصباح",
+      "icon": "sun",
+      "hint": "بعد الفجر حتى الضحى",
+      "file": "morning.json",
+      "time": [
+        "morning"
+      ]
+    },
+    {
+      "id": "evening",
+      "title": "أذكار المساء",
+      "icon": "moon",
+      "hint": "بعد العصر حتى النوم",
+      "file": "evening.json",
+      "time": [
+        "evening",
+        "night"
+      ]
+    },
+    {
+      "id": "sleep",
+      "title": "أذكار النوم",
+      "icon": "bed",
+      "hint": "قبل النوم مباشرة",
+      "file": "sleep.json",
+      "time": [
+        "sleep"
+      ]
+    },
+    {
+      "id": "wake",
+      "title": "أذكار الاستيقاظ",
+      "icon": "wake",
+      "hint": "عند الاستيقاظ",
+      "file": "wake.json",
+      "time": [
+        "morning"
+      ]
+    },
+    {
+      "id": "after_prayer",
+      "title": "أذكار بعد الصلاة",
+      "icon": "pray",
+      "hint": "بعد الفريضة",
+      "file": "after_prayer.json",
+      "time": []
+    },
+    {
+      "id": "food",
+      "title": "أذكار الطعام",
+      "icon": "food",
+      "hint": "قبل/بعد الأكل",
+      "file": "food.json",
+      "time": []
+    },
+    {
+      "id": "quran_dua",
+      "title": "أدعية من القرآن",
+      "icon": "quran",
+      "hint": "مختارات قصيرة",
+      "file": "quran_dua.json",
+      "time": []
+    },
+    {
+      "id": "prophetic_dua",
+      "title": "أدعية نبوية",
+      "icon": "dua",
+      "hint": "مختارات",
+      "file": "prophetic_dua.json",
+      "time": []
+    },
+    {
+      "id": "jawami",
+      "title": "جوامع الدعاء",
+      "icon": "star",
+      "hint": "قصير جامع",
+      "file": "jawami.json",
+      "time": []
+    },
+    {
+      "id": "istiftah",
+      "title": "أدعية استفتاح الصلاة",
+      "icon": "dua",
+      "hint": "أكثر من صيغة",
+      "file": "istiftah_salah.json",
+      "time": []
+    }
+  ]
+}
